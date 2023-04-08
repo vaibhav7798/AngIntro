@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';//registred sussfully
 import { PostComponent } from './post/post.component';
 import { PostlistComponent } from './postlist/postlist.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({     //directives+component+pipes
   declarations: [
     AppComponent,
@@ -14,7 +14,8 @@ import { PostlistComponent } from './postlist/postlist.component';
   ],
   imports: [  //module
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

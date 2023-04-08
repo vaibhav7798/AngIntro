@@ -1,3 +1,4 @@
+
 <h1>shri shivay namshubhyam</h1>
 <app-navbar></app-navbar>
 <app-post [fromParent]="parentMessage" (messageEvent)='receivemessage($event)'></app-post>
@@ -5,3 +6,44 @@
 {{message}}
 <hr>
 {{fromchildoutput}}
+
+<!-- section 1 -->
+
+<p>{{showmsg}}</p>  <!---string inteerpolation---->   
+
+<!----CLICK EVENT-->
+<button (click)="buttonClick()">click me</button> <br><br>
+
+<!---KEYUP event-->
+<input type="text" (keyup)="funkeyup()" placeholder="keyup event"><br><br>
+
+<!----property binding--->
+<input type="text" [value]="propertybinding"><br><br>
+
+<!-----2 way data binding---->
+<input type="text" [(ngModel)]="username" placeholder="2 way data binding">{{username}}
+
+<!----*ngFor directive---->
+ {{postArray}}  <!---all data showed in one line---->
+
+<ul>
+    <li *ngFor="let postarray of postArray">{{postarray}}<li>
+</ul>
+
+<ol type="A">
+    <!-- <li *ngFor="let objarray of objArray">{{objarray.name}},{{objarray.add}},{{objarray.age}}</li> -->
+    <li *ngFor="let objarray of objArray">{{objarray | json}}<li>
+</ol>
+
+<!-----ngIF directive-->
+<div *ngIf="middlename"> <!---hide and show dom---->
+  <p>{{middlename}}</p>
+</div>
+<!-- 
+<!-----ngSwitchCase------>
+<ol [ngSwitch]="favColor">
+    <li *ngSwitchCase = "'blue'">blue</li>
+    <li *ngSwitchCase="'pink'">pink</li>
+    <li *ngSwitchCase="'green'">grenn</li>    
+
+</ol>

@@ -11,15 +11,24 @@ message!:any;
   parentMessage:string='mesage coming from the parent component';
   fromchildoutput!:string;
  @ViewChild(PostComponent) childcomp:any; 
+   showmsg:string="hello vaibhav";
+   username!:string;
+   propertybinding="property binding example";
 
-constructor()
+   postArray=["post 1","post 2","post 3","post 4","post 5"];
+  objArray=[{"name":"vaibhav","add":"chalisgaon","age":24},
+           {"name":"vaibhav1","add":"chalisgaon1","age":25}];
+
+    middlename="sanjay";
+    favColor="pink";
+   constructor()
 {
   console.log(this.childcomp);
   
 }
 
 ngAfterViewInit(){
-  this.message=this.childcomp.fromChild;
+//  this.message=this.childcomp.fromChild;
 }
 
 receivemessage(value:any)
@@ -28,4 +37,18 @@ receivemessage(value:any)
   this.fromchildoutput=value;  
   
 }
+
+buttonClick()
+{console.log("button clicked event work");
+}
+
+funkeyup()
+{
+  console.log("keyup is working");
+  
+}
+
+
+
+
 }
